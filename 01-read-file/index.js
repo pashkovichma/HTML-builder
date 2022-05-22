@@ -12,3 +12,7 @@ rs.on('data', (chunk) => {
 rs.on('end', () => {
     console.log(data);
 });
+
+rs.on('error', (error) => {
+    console.log('Error:', error.message);
+});
