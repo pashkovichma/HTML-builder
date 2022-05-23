@@ -15,7 +15,7 @@ const copyDir = (folderFrom, folderTo) => {
     fs.readdir(folderFrom, { withFileTypes: true }, (err, files) => {
       if (err) throw err;
 
-      files.forEach((file) => {
+      for (let file of files) {
         const fileFrom = path.join(folderFrom, file.name);
         const fileTo = path.join(folderTo, file.name);
 
@@ -28,7 +28,7 @@ const copyDir = (folderFrom, folderTo) => {
             if (err) throw err;
           });
         }
-      });
+      };
     });
   });
 };

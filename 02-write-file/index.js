@@ -13,7 +13,7 @@ rl.on('line', (text) => {
     if (text.trim() === 'exit') {
         process.exit();
     }
-    file.write(`${text}\n`, (error) => {
+    file.write(text.toString(), (error) => {
         if (error) throw error;
     });
 });
@@ -24,8 +24,8 @@ process.on('SIGINT', () => {
 
 process.on('exit', (code) => {
     if (code === 0) {
-        console.log('Пока - пока');
+        rl.write('Пока - пока\n');
     } else {
-        console.log(`Ой, ошибка`);
+        rl.write(`Ой, ошибка\n`);
     }
 });
