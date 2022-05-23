@@ -18,7 +18,7 @@ fs.readdir(folderFrom, { withFileTypes: true }, (err, files) => {
         rs.on('data', (chunk) => (data += chunk));
         rs.on('end', () => {
             fileTo.write(data.trim());
-            fileTo.write('\n\n');
+            fileTo.write('\n');
         });
         rs.on('error', (err) => {
             if (err) throw err;
