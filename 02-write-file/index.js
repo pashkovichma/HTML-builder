@@ -24,7 +24,7 @@ process.on('SIGINT', () => {
 
 process.on('exit', (code) => {
     if (code === 0) {
-        rl.write('Пока - пока\n');
+        console.log('Пока - пока');
     } else {
         rl.write(`Ой, ошибка\n`);
     }
