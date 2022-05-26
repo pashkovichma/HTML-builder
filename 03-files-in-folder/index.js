@@ -12,7 +12,10 @@ fs.readdir(folderPath, {withFileTypes: true }, (err, files) => {
 
       fs.stat(filePath, (err, file) => {
         if (err) throw err;
-        console.log( `${name} - ${extension} - ${file.size}B`);
+
+        if (file.isFile()) {
+          console.log( `${name} - ${extension} - ${file.size}B`);
+        }
       })
     }
   });
