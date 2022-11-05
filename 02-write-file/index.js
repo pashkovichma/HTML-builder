@@ -55,5 +55,4 @@ process.on('exit', (code) => {
     } else {
         rl.write(`Ой, ошибка\n`);
     }
-});
-*/
+});*/
