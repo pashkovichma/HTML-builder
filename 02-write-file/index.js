@@ -29,3 +29,17 @@ process.on('exit', (code) => {
         rl.write(`Ой, ошибка\n`);
     }
 });
+
+/*
+const fs = require('fs');
+const readline = require('readline');
+const path = require('path');
+
+const rl readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+const pathToFile = path.join('02-write-file', 'text.txt');
+
+const fileText = fs.createWriteStream(pathToFile);
